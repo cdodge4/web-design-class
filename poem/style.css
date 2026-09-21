@@ -1,0 +1,67 @@
+*{
+    Margin: 0;
+    Padding: 0;
+}
+body {
+    background-color: rgb(28, 7, 7);
+    color: rgb(226, 214, 159);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+h1 {
+    font-size: 70px;
+font-weight: normal;
+margin: 100px 0 10px 100px;
+/* the shorthand is top right bottom left*/
+}
+h2 {
+    margin: 0 0 150px 100px;
+    font-size: 16px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+p {
+    font-size: 30px;
+    margin: 50px 0 50px 100px;
+}
+img {
+    width: 100%;
+    opacity: 1;
+}
+/* using percentages instead of pixels makes the image responsive*/
+.fadetop {
+    opacity: 0.2;
+}
+.fademiddle {
+    opacity: 0.4;
+}
+.fadelast {
+    opacity: 0.6;
+}
+h6 {
+    font-size: 12px;
+    font-weight: normal;
+    margin: 50px 0 50px 100px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.indent {
+    margin-left: 250px;
+}
+.indent-more {
+    margin-left: 400px;
+}
+.pink {
+    color: white;
+    text-decoration: underline;
+    font-style: italic;
+}
+.cabin-sketch-regular {
+  font-family: "Cabin Sketch", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cabin-sketch-bold {
+  font-family: "Cabin Sketch", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
