@@ -1,0 +1,210 @@
+/* day */
+body {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  background: rgb(137, 208, 252);  
+}
+.caption {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  color: white;
+}
+.say-medium {
+  display: none;
+}
+.ground {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 90px;
+  background: white;
+}
+.snowman {
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  margin-left: -150px;       
+  width: 300px;
+  height: 520px;
+  transform-origin: bottom center;
+}
+.bottom-ball {
+  position: absolute;
+  bottom: 0;
+  left: 50px;
+  width: 200px;
+  height: 200px;
+  background: white;
+  border: 3px solid rgb(197, 195, 195);
+  border-radius: 50%;        
+}
+.middle-ball {
+  position: absolute;
+  bottom: 170px;
+  left: 75px;
+  width: 150px;
+  height: 150px;
+  background: white;
+  border: 3px solid rgb(197, 195, 195);
+  border-radius: 50%;
+}
+.head {
+  position: absolute;
+  bottom: 300px;
+  left: 95px;
+  width: 110px;
+  height: 110px;
+  background: white;
+  border: 3px solid rgb(197, 195, 195);
+  border-radius: 50%;
+}
+.button {
+  position: absolute;
+  left: 143px;
+  width: 14px;
+  height: 14px;
+  background: black;
+  border-radius: 50%;
+}
+.button1 { bottom: 290px; }
+.button2 { bottom: 255px; }
+.button3 { bottom: 220px; }
+.arm {
+  position: absolute;
+  bottom: 260px;
+  width: 110px;
+  height: 7px;
+  background: rgb(128, 62, 16);
+}
+.left-arm {
+  left: -20px;
+  transform: rotate(30deg);
+}
+.right-arm {
+  left: 210px;
+  transform: rotate(-30deg);
+}
+.eye {
+  position: absolute;
+  bottom: 365px;
+  width: 12px;
+  height: 12px;
+  background: black;
+  border-radius: 50%;
+}
+.left-eye  { left: 125px; }
+.right-eye { left: 163px; }
+
+.nose {
+  position: absolute;
+  bottom: 345px;
+  left: 145px;
+  width: 0;
+  height: 0;
+  border-left: 45px solid orange;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+}
+
+.mouth {
+  position: absolute;
+}
+.happy-mouth {
+  bottom: 322px;
+  left: 128px;
+  width: 44px;
+  height: 18px;
+  border-bottom: 5px solid black;
+  border-radius: 0 0 44px 44px;
+}
+.scarf {
+  display: none;
+  position: absolute;
+  bottom: 292px;
+  left: 90px;
+  width: 120px;
+  height: 22px;
+  background: red;
+  border-radius: 10px;
+}
+.hat {
+  position: absolute;
+  bottom: 395px;
+  left: 60px;
+  width: 180px;
+  height: 100px;
+  transform-origin: bottom center;   
+  transition: transform 0.2s;       
+}
+.hat-top {
+  position: absolute;
+  bottom: 14px;
+  left: 40px;
+  width: 100px;
+  height: 80px;
+  background: #3a3a52;
+}
+.hat-band {
+  position: absolute;
+  bottom: 14px;
+  left: 40px;
+  width: 100px;
+  height: 16px;
+  background: rgb(209, 13, 52);
+}
+.hat-brim {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 180px;
+  height: 16px;
+  background: #2b2b3a;
+  border-radius: 8px;
+}
+/* dusk */
+@media (max-width: 768px) {
+  body {
+    background: rgb(162, 147, 194);
+  }
+  .ground {
+    background: rgb(184, 184, 221);
+  }
+  .snowman {
+    transform: scale(0.8);       
+  }
+  .scarf {
+    display: block;              
+  }
+  .caption {
+    font-size: 20px;
+  }
+  .say-big    { display: none; }
+  .say-medium { display: inline; }
+}
+/* night */
+@media (max-width: 480px) {
+  body {
+    background: rgb(32, 32, 150);
+  }
+  .ground {
+    background: rgb(168, 193, 226);
+  }
+  .snowman {
+    transform: scale(0.65);      
+  }
+  .arm {
+    display: none;               
+  }
+  .happy-mouth {
+    display: none;              
+  }
+  .caption {
+    font-size: 18px;
+  }
+  .say-medium { display: none; }
+}

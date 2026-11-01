@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hat-Tip Snowman</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <p class="caption">
+    <span class="say-big">Hello, friend! Move your mouse and watch me tip my hat.</span>
+    <span class="say-medium">Brr... it's getting dark.</span>
+  </p>
+
+  <div class="snowman">
+
+    <div class="bottom-ball"></div>
+    <div class="middle-ball"></div>
+
+    <div class="button button1"></div>
+    <div class="button button2"></div>
+    <div class="button button3"></div>
+
+    <div class="arm left-arm"></div>
+    <div class="arm right-arm"></div>
+
+    <div class="head"></div>
+
+    <div class="eye left-eye"></div>
+    <div class="eye right-eye"></div>
+    <div class="nose"></div>
+    <div class="mouth happy-mouth"></div>
+
+    <div class="scarf"></div>
+
+    <div class="hat" id="hat">
+      <div class="hat-top"></div>
+      <div class="hat-band"></div>
+      <div class="hat-brim"></div>
+    </div>
+
+  </div>
+
+  <div class="ground"></div>
+
+  <script>
+    var hat = document.getElementById("hat");
+
+    function tipHat(mouseX) {
+      var middle = window.innerWidth / 2;
+
+      // how far the mouse is from the middle (negative = left, positive = right)
+      var distance = mouseX - middle;
+
+      // tilt
+      var tilt = (distance / middle) * 35;
+      var lift = -Math.abs(tilt) / 2;
+      hat.style.transform = "translateY(" + lift + "px) rotate(" + tilt + "deg)";
+    }
+    document.addEventListener("mousemove", function (event) {
+      tipHat(event.clientX);
+    });
+
+  </script>
+
+</body>
+</html>
